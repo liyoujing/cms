@@ -13,7 +13,7 @@ public class BaseAction extends ActionSupport {
 	
 	/**
 	 * 跳转到后台管理首页！
-	 * http://localhost:8888/cms/manager/toIndex.action
+	 * http://localhost:8080/cms/manager/toIndex.action
 	 * */
 	@Action(value="toIndex",results={
 			@Result(name="success",location="/WEB-INF/jsp/manager/index.jsp")
@@ -45,6 +45,18 @@ public class BaseAction extends ActionSupport {
 					location="/WEB-INF/jsp/manager/categoryManager.jsp")
 	})
 	public String toCategoryManager(){
+		
+		return "success";
+	}
+	/**
+	 * @author liyoujing
+	 * 跳转到添加学生管理
+	 * */
+	@Action(value="toAddStudent",results={
+			@Result(name="success",
+					location="/WEB-INF/jsp/manager/addStudent.jsp")
+	})
+	public String toAddStudent(){
 		
 		return "success";
 	}
